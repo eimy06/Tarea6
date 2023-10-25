@@ -1,0 +1,20 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Clima en República Dominicana</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-card>
+    <ion-card-header>
+      Clima actual en Santo Domingo
+    </ion-card-header>
+    <ion-card-content>
+      <div *ngIf="weatherData.main">
+        <p>Temperatura: {{ weatherData.main.temp }}°C</p>
+        <p>Humedad: {{ weatherData.main.humidity }}%</p>
+        <p>Condiciones: {{ weatherData.weather[0].description }}</p>
+      </div>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

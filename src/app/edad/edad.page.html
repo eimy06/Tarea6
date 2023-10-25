@@ -1,0 +1,18 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>edad</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-item>
+    <ion-label position="floating">Nombre</ion-label>
+    <ion-input [(ngModel)]="nombre" type="text"></ion-input>
+  </ion-item>
+  <ion-button (click)="calcularEdad()">Calcular Edad</ion-button>
+  <div *ngIf="grupoEdad">
+    <h2>Grupo de Edad:</h2>
+    <p>{{ grupoEdad }}</p>
+    <img [src]="imagen" alt="Imagen del grupo de edad">
+  </div>
+</ion-content>
